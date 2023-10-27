@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 05</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            padding: 1em;
+        }
+
+        td {
+            border-top: 1px solid black;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+<h1>
+    Catálogo de productos
+</h1>
+<form action="02-05.php" method="post">
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Producto 1</td>
+            <td>Descripción del producto 1</td>
+            <td>Precio 5€</td>
+            <td><input type="number" name="producto1" value="0"></td>
+        </tr>
+        <tr>
+            <td>Producto 2</td>
+            <td>Descripción del producto 2</td>
+            <td>Precio 10€</td>
+            <td><input type="number" name="producto2" value="0"></td>
+        </tr>
+        <tr>
+            <td>Producto 3</td>
+            <td>Descripción del producto 3</td>
+            <td>Precio 15€</td>
+            <td><input type="number" name="producto3" value="0"></td>
+        </tr>
+        </tbody>
+    </table>
+    <button type="button">Comprar</button>
+</form>
+</body>
+</html>
