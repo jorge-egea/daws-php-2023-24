@@ -1,7 +1,7 @@
 <?php
-$amountOfProduct1 = $_POST["product1"] ?? 0;
-$amountOfProduct2 = $_POST["product2"] ?? 0;
-$amountOfProduct3 = $_POST["product3"] ?? 0;
+$amountOfProduct1 = $_POST["producto1"] ?? 0;
+$amountOfProduct2 = $_POST["producto2"] ?? 0;
+$amountOfProduct3 = $_POST["producto3"] ?? 0;
 
 function calculateTotalAmount($amountP1, $amountP2, $amountP3) {
     $total = 0;
@@ -34,7 +34,7 @@ function generateHtmlListOfProducts($amountP1, $amountP2, $amountP3) {
 </head>
 <body>
 <h1>Precio total:</h1>
-<p>El importa total es de: <?=calculateTotalAmount($amountOfProduct1, $amountOfProduct2, $amountOfProduct3)?></p>
+<p>El importa total es de: <?=calculateTotalAmount($amountOfProduct1, $amountOfProduct2, $amountOfProduct3)?>€</p>
 <h1>Detalle de la compra:</h1>
 <?=generateHtmlListOfProducts($amountOfProduct1, $amountOfProduct2, $amountOfProduct3)?>
 </body>
