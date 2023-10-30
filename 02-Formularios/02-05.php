@@ -37,6 +37,7 @@ function generateHtmlListOfProducts($amountP1, $amountP2, $amountP3) {
 <p>El importa total es de: <?=calculateTotalAmount($amountOfProduct1, $amountOfProduct2, $amountOfProduct3)?>€</p>
 <h1>Detalle de la compra:</h1>
 <?=generateHtmlListOfProducts($amountOfProduct1, $amountOfProduct2, $amountOfProduct3)?>
+<a href="02-05.html">Volver a la tienda</a>
 </body>
 </html>
 
