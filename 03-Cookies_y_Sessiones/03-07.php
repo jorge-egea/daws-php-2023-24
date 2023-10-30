@@ -93,19 +93,28 @@ function mensajeDeBienvenida() {
     </tr>
     <tr>
         <td>Producto 1</td>
-        <td>Descripción producto 1</td>
+        <td>
+            Descripción producto 1
+            <a href="03-09.view.php?producto=p1">Ver detalles</a>
+        </td>
         <td>5€</td>
         <td><a href="?product=Producto-1">Añadir</a></td>
     </tr>
     <tr>
         <td>Producto 2</td>
-        <td>Descripción producto 2</td>
+        <td>
+            Descripción producto 2
+            <a href="03-09.view.php?producto=p2">Ver detalles</a>
+        </td>
         <td>10€</td>
         <td><a href="?product=Producto-2">Añadir</a></td>
     </tr>
     <tr>
         <td>Producto 3</td>
-        <td>Descripción producto 3</td>
+        <td>
+            Descripción producto 3
+            <a href="03-09.view.php?producto=p3">Ver detalles</a>
+        </td>
         <td>5€</td>
         <td><a href="?product=Producto-3">Añadir</a></td>
     </tr>
