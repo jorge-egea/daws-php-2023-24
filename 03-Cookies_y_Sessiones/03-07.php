@@ -3,8 +3,7 @@ session_start();
 
 $product = NULL;
 
-if (isset($_GET["product"]))
-    $product = $_GET["product"];
+if (isset($_GET["product"])) $product = $_GET["product"];
 
 if (isset($product)) {
     if (isset($_SESSION["list"]))
@@ -28,24 +27,16 @@ $idioma = NULL;
 if (isset($_POST["idioma"])) {
     $idioma = $_POST["idioma"];
     setcookie("idioma", $idioma);
-}
+} else if (isset($_COOKIE["idioma"])) $idioma = $_COOKIE["idioma"];
 
-function mensajeDeBienvenida() {
-    if ( isset($idioma) )
+function mensajeDeBienvenida($idioma) :string {
+    if (isset($idioma))
         switch ($idioma) {
             case "castellano":
                 return "<h1>Bienvenido</h1>";
             case "euskera":
                 return "<h1>Ongi etorri</h1>";
         }
-    if ( isset($_POST["idioma"])) {
-        switch ($_POST["idioma"]) {
-            case "castellano":
-                return "<h1>Bienvenido</h1>";
-            case "euskera":
-                return "<h1>Ongi etorri</h1>";
-        }
-    }
     return "";
 }
 ?>
@@ -68,7 +59,7 @@ function mensajeDeBienvenida() {
 <body>
 <header>
     <h1>
-        <?=mensajeDeBienvenida()?>
+        <?=mensajeDeBienvenida($idioma)?>
     </h1>
 </header>
 <form method="post">
@@ -99,6 +90,7 @@ function mensajeDeBienvenida() {
         </td>
         <td>5€</td>
         <td><a href="?product=Producto-1">Añadir</a></td>
+        <td><a>Añadir a favorito</a></td>
     </tr>
     <tr>
         <td>Producto 2</td>
@@ -108,6 +100,7 @@ function mensajeDeBienvenida() {
         </td>
         <td>10€</td>
         <td><a href="?product=Producto-2">Añadir</a></td>
+        <td><a>Añadir a favorito</a></td>
     </tr>
     <tr>
         <td>Producto 3</td>
@@ -117,6 +110,7 @@ function mensajeDeBienvenida() {
         </td>
         <td>5€</td>
         <td><a href="?product=Producto-3">Añadir</a></td>
+        <td><a>Añadir a favorito</a></td>
     </tr>
 </table>
 </body>
