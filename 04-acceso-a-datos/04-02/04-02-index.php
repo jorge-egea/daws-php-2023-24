@@ -13,6 +13,8 @@ if (isset($_GET["id"])) {
     }
 }
 
-$employees = getAllEmployees($connection);
+if (isset($_POST["q"])) {
+    $employees = getAllEmployeesWhereLike($connection, $_POST["q"]);
+} else $employees = getAllEmployees($connection);
 
 include_once "04-02-index.view.php";

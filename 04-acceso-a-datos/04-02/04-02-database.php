@@ -29,6 +29,14 @@ function getAllEmployees($connection) :array {
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function getAllEmployeesWhereLike($connection, $q) :array {
+    $q = strtolower($q);
+    $statement = $connection->prepare("SELECT id, dni, nombre, apellidos, fecha, email, genero, curriculum FROM empleados WHERE LOWER(nombre) LIKE :q1 OR LOWER(apellidos) LIKE :q2");
+    $statement->execute(["q1" => '%' . $q . '%', "q2" => '%' . $q . '%']);
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 function getEmployee($connection, $id) :array {
     $statement = $connection->prepare("SELECT id, dni, nombre, apellidos, fecha, email, genero, curriculum FROM empleados WHERE id = :id");
     $statement->execute(["id" => $id]);
