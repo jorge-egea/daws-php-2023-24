@@ -15,6 +15,11 @@
     </style>
 </head>
 <body>
+<form method="post">
+    <label for="search">Buscar empleado</label>
+    <input id="search" name="q" type="search" value="<?php if(isset($_POST["q"])) echo $_POST["q"]; ?>">
+    <button type="submit">Buscar</button>
+</form>
 <a href="04-02-anadirEmpleado.view.php">Añadir empleado</a>
 <form>
     <a href="#"

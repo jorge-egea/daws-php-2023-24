@@ -23,10 +23,6 @@
         <td><?=$employee["apellidos"]?></td>
     </tr>
     <tr>
-        <td>Edad</td>
-        <td><?=$employee["fecha"]?></td>
-    </tr>
-    <tr>
         <td>Sexo</td>
         <td><?=$employee["genero"]?></td>
     </tr>
