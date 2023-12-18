@@ -1,5 +1,7 @@
 <?php
 
+namespace orientacionObjetos\models;
+
 class Publicacion {
     private int $ano;
     private string $titulo;
@@ -20,18 +22,3 @@ class Publicacion {
     }
 
 }
-
-$ano = 2000;
-$titulo = "Musashi";
-$texto = "Musashi, es uno de los samurais con más renombre de la historia japonesa.";
-
-$p1 = new Publicacion(2002, $titulo, $texto);
-
-echo $p1->leer();
-
-echo "\n";
-echo "\n";
-
-$p1->escribir("Se dice que nunca ha perdido un duelo.");
-
-echo $p1->leer();
