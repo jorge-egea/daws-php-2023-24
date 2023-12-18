@@ -1,6 +1,6 @@
 <?php
 
-namespace orientacionObjetos\models;
+namespace orientacionObjetos\ejercicio02\models;
 
 class Publicacion {
     private int $ano;

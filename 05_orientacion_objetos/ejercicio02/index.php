@@ -2,7 +2,7 @@
 
 include_once "models/Publicacion.php";
 
-use orientacionObjetos\models\Publicacion;
+use orientacionObjetos\ejercicio02\models\Publicacion;
 
 $ano = 2000;
 $titulo = "Musashi";
